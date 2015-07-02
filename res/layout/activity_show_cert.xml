@@ -1,0 +1,102 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbkgrd"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/showcardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mainbkgrd"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/cert_vp_label"
+            style="@style/Labelsrelative"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_validation" />
+
+        <TextView
+            android:id="@+id/cert_pop_label"
+            style="@style/Labelsrelative"
+            android:layout_alignBottom="@+id/cert_ind_pop"
+            android:text="@string/certificate_pop" />
+
+        <TextView
+            android:id="@+id/cert_sub_label"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/cert_pop_label"
+            android:text="@string/subject" />
+
+        <TextView
+            android:id="@+id/cert_nb_label"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/cert_sub_dn"
+            android:text="@string/valid_from" />
+
+        <TextView
+            android:id="@+id/cert_na_label"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/cert_nb_date"
+            android:text="@string/valid_to" />
+
+        <ImageView
+            android:id="@+id/cert_ind_vp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/cert_vp_label"
+            android:layout_marginBottom="@dimen/inputmarginbottom"
+            android:layout_marginRight="@dimen/inputmarginleft"
+            android:contentDescription="@string/TODO"
+            android:src="@drawable/cert_bad" />
+
+        <ImageView
+            android:id="@+id/cert_ind_pop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/cert_pop_label"
+            android:layout_below="@+id/cert_ind_vp"
+            android:layout_marginBottom="@dimen/inputmarginbottom"
+            android:layout_marginRight="@dimen/inputmarginleft"
+            android:contentDescription="@string/TODO"
+            android:src="@drawable/cert_bad" />
+
+        <TextView
+            android:id="@+id/cert_iss_label"
+            style="@style/Labelsrelative"
+            android:layout_alignLeft="@+id/cert_na_label"
+            android:layout_below="@+id/cert_na_date"
+            android:text="@string/issuer" />
+
+        <TextView
+            android:id="@+id/cert_nb_date"
+            style="@style/Showtext"
+            android:layout_alignRight="@+id/cert_sub_dn"
+            android:layout_below="@+id/cert_nb_label" />
+
+        <TextView
+            android:id="@+id/cert_na_date"
+            style="@style/Showtext"
+            android:layout_alignRight="@+id/cert_nb_date"
+            android:layout_below="@+id/cert_na_label" />
+
+        <TextView
+            android:id="@+id/cert_iss_dn"
+            style="@style/Showtext"
+            android:layout_alignRight="@+id/cert_na_date"
+            android:layout_below="@+id/cert_iss_label"
+            android:layout_marginLeft="@dimen/inputmarginleft" />
+
+        <TextView
+            android:id="@+id/cert_sub_dn"
+            style="@style/Showtext"
+            android:layout_alignRight="@+id/cert_ind_pop"
+            android:layout_below="@+id/cert_sub_label"
+            android:layout_marginLeft="@dimen/inputmarginleft" />
+    </RelativeLayout>
+
+</ScrollView>

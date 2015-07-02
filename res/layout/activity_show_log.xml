@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbkgrd"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/scrollViewLog"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7.68"
+        android:background="@drawable/mainbkgrd" >
+
+        <TextView
+            android:id="@+id/readerlog2"
+            style="@style/Showtext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/mainbkgrd"
+            android:text=""
+            android:textSize="10sp"
+            android:typeface="monospace" />
+
+    </ScrollView>
+
+</LinearLayout>

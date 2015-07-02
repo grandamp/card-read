@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.idevity.card.read" android:versionCode="10"
+	android:versionName="1.6 REL">
+
+	<uses-feature android:name="android.hardware.nfc"
+		android:required="true" />
+
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="21" />
+
+	<uses-permission android:name="android.permission.NFC" />
+
+	<application android:allowBackup="false"
+		android:allowClearUserData="true" android:icon="@drawable/launcher"
+		android:label="@string/app_name" android:theme="@style/Theme.idevityMainapptheme">
+		<meta-data android:name="android.nfc.disable_beam_default"
+			android:value="true" />
+
+		<activity android:name="com.idevity.card.read.SplashActivity"
+			android:label="@string/app_name"
+			android:theme="@android:style/Theme.Holo.Light.NoActionBar.Fullscreen">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name="com.idevity.card.read.ReadMain"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+			android:label="@string/title_activity_read_main"
+			android:parentActivityName="com.idevity.card.read.Read80073">
+			<meta-data android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.idevity.card.read.Read80073" />
+		</activity>
+					
+		<activity android:name="com.idevity.card.read.Read80073"
+			android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+			android:label="@string/title_activity_read_main"
+			android:parentActivityName="com.idevity.card.read.SplashActivity">
+			<intent-filter>
+				<action android:name="android.nfc.action.TECH_DISCOVERED" />
+				<category android:name="android.intent.category.DEFAULT" />
+			</intent-filter>
+			<meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+				android:resource="@xml/reader_filter_nfc" />
+			<meta-data android:name="android.support.PARENT_ACTIVITY"
+				android:value="com.idevity.card.read.SplashActivity" />
+		</activity>
+
+		<activity android:name="com.idevity.card.read.IdevityInfo"
+			android:label="@string/title_activity_idevity_info">
+		</activity>
+
+		<activity android:name="com.idevity.card.read.SettingsActivity"
+			android:label="@string/title_activity_settings">
+		</activity>
+
+		<activity android:name="com.idevity.card.read.Easter"
+			android:label="@string/title_activity_easter">
+		</activity>
+
+		<activity android:name="com.idevity.card.read.ReadPIN"
+			android:label="@string/title_activity_pin">
+		</activity>
+
+	</application>
+
+</manifest>

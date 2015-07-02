@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nocardView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbkgrd" >
+
+    <TextView
+        android:id="@+id/nocak1"
+        style="@style/Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/no_cak1" />
+
+    <ImageView
+        android:id="@+id/nocakpic"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nocak1"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/cake_pic"
+        android:src="@drawable/cake" />
+
+    <TextView
+        android:id="@+id/nocak2"
+        style="@style/Instructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nocakpic"
+        android:layout_centerHorizontal="true"
+        android:text="@string/no_cak2" />
+
+</RelativeLayout>

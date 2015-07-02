@@ -1,0 +1,94 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbkgrd"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/showchuidView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mainbkgrd"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/chuid1"
+            style="@style/Labelsrelative"
+            android:text="@string/sign_valid" />
+
+        <TextView
+            android:id="@+id/chuid2"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/chuid1"
+            android:layout_alignBottom="@+id/chuidindicator2"
+            android:text="@string/certificate_validation" />
+
+        <TextView
+            android:id="@+id/chuid3"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/chuid2"
+            android:text="@string/subject" />
+
+        <TextView
+            android:id="@+id/chuid4"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/chuid_subject"
+            android:text="@string/valid_from" />
+
+        <TextView
+            android:id="@+id/chuid5"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/chuid_date"
+            android:text="@string/valid_to" />
+
+        <ImageView
+            android:id="@+id/chuidindicator1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/chuid1"
+            android:layout_marginRight="@dimen/inputmarginleft"
+            android:contentDescription="@string/TODO"
+            android:src="@drawable/cert_good" />
+
+        <ImageView
+            android:id="@+id/chuidindicator2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/chuid2"
+            android:layout_below="@+id/chuidindicator1"
+            android:layout_marginRight="@dimen/inputmarginleft"
+            android:contentDescription="@string/TODO"
+            android:src="@drawable/cert_good"/>
+
+        <TextView
+            android:id="@+id/chuid6"
+            style="@style/Labelsrelative"
+            android:layout_below="@+id/chuid_expiry"
+            android:text="@string/issuer" />
+
+        <TextView
+            android:id="@+id/chuid_date"
+            style="@style/Showtext"
+            android:layout_below="@+id/chuid4" />
+
+        <TextView
+            android:id="@+id/chuid_expiry"
+            style="@style/Showtext"
+            android:layout_below="@+id/chuid5" />
+
+        <TextView
+            android:id="@+id/chuid_issuer"
+            style="@style/Showtext"
+            android:layout_below="@+id/chuid6"
+            android:layout_marginLeft="@dimen/inputmarginleft" />
+
+        <TextView
+            android:id="@+id/chuid_subject"
+            style="@style/Showtext"
+            android:layout_below="@+id/chuid3"
+            android:layout_marginLeft="@dimen/inputmarginleft" />
+    </RelativeLayout>
+
+</ScrollView>

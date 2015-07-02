@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainbkgrd"
+    tools:context=".PINpad" >
+
+    <TextView
+        android:id="@+id/pininstructions"
+        style="@style/Instructions"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/pininstructions" />
+
+    <TextView
+        android:id="@+id/promptValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pininstructions"
+        android:gravity="center"
+        android:text="@string/pin_val_placeholder"
+        android:textColor="#FFFF0000"
+        android:textSize="22sp" />
+
+    <TableLayout
+        android:id="@+id/button"
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promptValue"
+        android:orientation="vertical"
+        android:stretchColumns="*" >
+
+        <TableRow android:layout_width="wrap_content" >
+
+            <Button
+                android:id="@+id/button1"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_1" >
+            </Button>
+
+            <Button
+                android:id="@+id/button2"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_2" >
+            </Button>
+
+            <Button
+                android:id="@+id/button3"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_3" >
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button4"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_4" >
+            </Button>
+
+            <Button
+                android:id="@+id/button5"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_5" >
+            </Button>
+
+            <Button
+                android:id="@+id/button6"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_6" >
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/button7"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_7" >
+            </Button>
+
+            <Button
+                android:id="@+id/button8"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_8" >
+            </Button>
+
+            <Button
+                android:id="@+id/button9"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_9" >
+            </Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/dummy"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_dummy" >
+            </Button>
+
+            <Button
+                android:id="@+id/button0"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_0" >
+            </Button>
+
+            <Button
+                android:id="@+id/buttonBack"
+                style="?android:attr/buttonBarButtonStyle"
+                android:text="@string/button_back" >
+            </Button>
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/buttonEnter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:text="@string/button_enter"
+        android:textSize="22sp" />
+
+</RelativeLayout>

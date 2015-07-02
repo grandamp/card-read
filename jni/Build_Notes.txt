@@ -1,0 +1,121 @@
+$ uname -a
+Linux domU-12-31-39-03-B5-9A 3.13.0-24-generic #47-Ubuntu SMP Fri May 2 23:30:00 UTC 2014 x86_64 x86_64 x86_64 GNU/Linux
+
+$ gcc -v
+Using built-in specs.
+COLLECT_GCC=/usr/bin/gcc-4.8.real
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/4.8/lto-wrapper
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 4.8.2-19ubuntu1' --with-bugurl=file:///usr/share/doc/gcc-4.8/README.Bugs --enable-languages=c,c++,java,go,d,fortran,objc,obj-c++ --prefix=/usr --program-suffix=-4.8 --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --with-gxx-include-dir=/usr/include/c++/4.8 --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --enable-gnu-unique-object --disable-libmudflap --enable-plugin --with-system-zlib --disable-browser-plugin --enable-java-awt=gtk --enable-gtk-cairo --with-java-home=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64/jre --enable-java-home --with-jvm-root-dir=/usr/lib/jvm/java-1.5.0-gcj-4.8-amd64 --with-jvm-jar-dir=/usr/lib/jvm-exports/java-1.5.0-gcj-4.8-amd64 --with-arch-directory=amd64 --with-ecj-jar=/usr/share/java/eclipse-ecj.jar --enable-objc-gc --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --with-tune=generic --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 4.8.2 (Ubuntu 4.8.2-19ubuntu1) 
+
+Build Environment in:		/usr/local/build/
+Source is built in:		/usr/local/build/Android_FIPS_OpenSSL
+Android NDK (32bit Target):	/usr/local/build/AndroidNDK/android-ndk-r10c
+OpenSSL (ARM-32) Installed in:	/usr/local/build/ssl/android-16
+32bit Build Env:		/usr/local/build/Android_FIPS_OpenSSL/setenv-android.sh
+
+Environment Prep:
+
+ 2028  wget https://www.openssl.org/source/openssl-fips-2.0.8.tar.gz
+ 2029  wget https://www.openssl.org/source/openssl-1.0.1j.tar.gz
+ 2030  ls -la
+ 2031  sha1sum openssl-1.0.1j.tar.gz 
+ 2032  sha1sum openssl-fips-2.0.8.tar.gz 
+ 2033  gunzip openssl-fips-2.0.8.tar.gz 
+ 2034  tar -xf openssl-fips-2.0.8.tar 
+ 2035  gunzip openssl-1.0.1j.tar.gz 
+ 2036  tar -xf openssl-1.0.1j.tar 
+ 2037  cp setenv-32-android.sh setenv-android.sh
+ 2038  ls -la
+ 2039  vi setenv-android.sh 
+ 2040  ls /usr/local/build/AndroidNDK/android-ndk-r10c/
+ 2041  ls -l /usr/local/build/AndroidNDK/android-ndk-r10c
+ 2042  ls -la /usr/local/build/AndroidNDK/android-ndk-r10c/platforms/android-16/arch-arm
+ 2043  ls -la /usr/local/build/AndroidNDK/android-ndk-r10c/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin
+ 2044  ls -l /usr/local/build/ssl/
+ 2045  rm -r /usr/local/build/ssl/32
+ 2046  rm -r /usr/local/build/ssl/android-16/
+ 2047  ls
+ 2048  ls -l /usr/local/build/ssl/
+ 2049  ls -la
+ 2050  vi setenv-android.sh 
+
+Build for ARM-32:
+
+ 2051  . ./setenv-android.sh
+ 2052  cd openssl-fips-2.0.8
+ 2053  ./config 
+ 2054  make
+ 2055  find . -name fipscanister.o
+ 2056  readelf -h ./fips/fipscanister.o | grep -i 'class\|machine'
+ 2057  make install
+ 2058  ls -la /usr/local/ssl/fips-2.0/
+ 2059  mv mv /usr/local/ssl/fips-2.0 /usr/local/build/ssl/android-16
+ 2060  mkdir /usr/local/build/ssl/android-16
+ 2061  mv /usr/local/ssl/fips-2.0 /usr/local/build/ssl/android-16
+ 2062  ls -la /usr/local/build/ssl/android-16
+ 2063  echo $ANDROID_API
+ 2064  mv /usr/local/build/ssl/android-16/fips-2.0/* /usr/local/build/ssl/android-16
+ 2065  ls -la /usr/local/build/ssl/android-16
+ 2066  ls -la /usr/local/build/ssl/android-16/fips-2.0/
+ 2067  rm -r /usr/local/build/ssl/android-16/fips-2.0/
+ 2068  ls -al
+ 2069  ls -al /usr/local/build/ssl/android-16
+ 2070  mv ./Android_FIPS_OpenSSL/openssl-fips-2.0.8-32/util/incore /usr/local/build/ssl/android-16/bin/
+ 2071  mv ./Android_FIPS_OpenSSL/openssl-fips-2.0.8/util/incore /usr/local/build/ssl/android-16/bin/
+ 2072  cd ..
+ 2073  mv ./openssl-fips-2.0.8/util/incore /usr/local/build/ssl/android-16/bin/
+ 2074  ls -la /usr/local/build/ssl/android-16/bin/
+ 2075  export FIPS_SIG=""
+ 2076  . ./setenv-android.sh
+ 2077  find "/usr/local/build/ssl/$_ANDROID_API" -name incore
+ 2078  export FIPS_SIG="/usr/local/build/ssl/android-16/bin/incore"
+ 2079  . ./setenv-android.sh
+ 2080  cd openssl-1.0.1j
+ 2081  perl -pi -e 's/install: all install_docs install_sw/install: install_docs install_sw/g' Makefile.org
+ 2083  ./config fips shared -no-ssl2 -no-ssl3 -no-comp -no-hw -no-engine --openssldir=/usr/local/build/ssl/android-16/ --with-fipsdir=/usr/local/build/ssl/android-16/
+ 2084  make depend
+ 2085  make all
+ 2086  find . -name libcrypto.a
+ 2087  readelf -h ./libcrypto.a | grep -i 'class\|machine' | head -2
+ 2088  echo $ANDROID_TOOLCHAIN
+ 2089  ls -la /usr/local/build/ssl/android-16/
+ 2090  ls -la /usr/local/build/ssl/android-16/bin/
+ 2091  ls -la /usr/local/build/ssl/android-16/include/
+ 2092  ls -la /usr/local/build/ssl/android-16/lib
+ 2093  make install CC=$ANDROID_TOOLCHAIN/arm-linux-androideabi-gcc RANLIB=$ANDROID_TOOLCHAIN/arm-linux-androideabi-ranlib
+ 2094  ls -la /usr/local/build/ssl/android-16/lib
+ 2095  ls -la /usr/local/build/ssl/android-16/include/
+ 2096  ls -la /usr/local/build/ssl/android-16/bin/
+
+Build of OpenSSL Wrapper:
+
+Environment script sets:  (minus not finding incore)
+
+ANDROID_NDK_ROOT: /usr/local/build/AndroidNDK/android-ndk-r10c
+ANDROID_EABI: arm-linux-androideabi-4.8
+ANDROID_API: android-16
+ANDROID_SYSROOT: /usr/local/build/AndroidNDK/android-ndk-r10c/platforms/android-16/arch-arm
+ANDROID_TOOLCHAIN: /usr/local/build/AndroidNDK/android-ndk-r10c/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin
+FIPS_SIG: /usr/local/build/ssl/android-16/bin/incore
+CROSS_COMPILE: arm-linux-androideabi-
+ANDROID_DEV: /usr/local/build/AndroidNDK/android-ndk-r10c/platforms/android-16/arch-arm/usr
+
+Needs:
+
+export ANDROID_API=android-16
+export PREBUILT_FIPS_OPENSSL=/usr/local/build/ssl/$ANDROID_API
+export ANDROID_NDK_ROOT=/usr/local/build/AndroidNDK/android-ndk-r10c
+export ANDROID_EABI=arm-linux-androideabi-4.8
+export ANDROID_SYSROOT="$ANDROID_NDK_ROOT/platforms/$ANDROID_API/arch-arm"
+export ANDROID_TOOLCHAIN="$ANDROID_NDK_ROOT/toolchains/$ANDROID_EABI/prebuilt/linux-x86_64/bin"
+export FIPS_SIG="$PREBUILT_FIPS_OPENSSL/bin/incore"
+export CROSS_COMPILE=arm-linux-androideabi-
+export ANDROID_DEV="$ANDROID_NDK_ROOT/platforms/$ANDROID_API/arch-arm/usr"
+export CC="$PREBUILT_FIPS_OPENSSL/bin/fipsld"
+export FIPSLD_CC="$ANDROID_TOOLCHAIN/arm-linux-androideabi-gcc"
+
+$CC --sysroot="$ANDROID_SYSROOT" OpensslFipsProvider.c -fPIC -shared -I$PREBUILT_FIPS_OPENSSL/include -I$ANDROID_DEV/include -Wl,-Bstatic -lcrypto -lssl -L$PREBUILT_FIPS_OPENSSL/lib -L$ANDROID_DEV/lib -o libOpensslFipsProvider.so -Wl,-Bdynamic -llog
+

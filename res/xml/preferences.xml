@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference android:key="pref_enablepop"
+		android:title="@string/pref_enable_pop_title"
+		android:summary="@string/pref_enable_pop_summary"
+		android:defaultValue="true" />
+	<CheckBoxPreference android:key="pref_showlog"
+		android:title="@string/pref_show_log_title"
+		android:summary="@string/pref_show_log_summary"
+		android:defaultValue="false" />
+	<CheckBoxPreference android:key="pref_showdebug"
+		android:title="@string/pref_show_debug_title"
+		android:summary="@string/pref_show_debug_summary"
+		android:defaultValue="false" />
+	<EditTextPreference android:key="pref_defaultemail"
+		android:title="@string/pref_default_email"
+		android:summary="@string/pref_default_email_summary"
+		android:defaultValue="support@idevity.com" />
+</PreferenceScreen>

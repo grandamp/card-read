@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mainbkgrd"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/showcardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mainbkgrd"
+        android:orientation="vertical" >
+        
+        <TextView
+            android:id="@+id/validityLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/certificate_validation" />
+
+        <ImageView
+	       android:id="@+id/validityIndicator1"
+	       android:layout_alignRight="@id/validityLabel"
+	       android:layout_alignParentRight="true"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:contentDescription="@string/TODO"
+	       android:src="@drawable/cert_good" />
+
+        <TextView
+            android:id="@+id/agencycodeLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/validityLabel"
+            android:text="@string/agency_code" />
+
+        <TextView
+            android:id="@+id/agencyCode"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/agencycodeLabel"
+            android:layout_below="@+id/validityIndicator1"
+            android:ems="4"
+            android:maxLength="4" />
+
+        <TextView
+            android:id="@+id/issuingAgency"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/agencyCode" />
+
+        <TextView
+            android:id="@+id/systemcodeLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/issuingAgency"
+            android:text="@string/system_code" />
+
+        <TextView
+            android:id="@+id/systemCode"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/systemcodeLabel"
+            android:layout_below="@+id/issuingAgency"
+            android:ems="4"
+            android:maxLength="4" />
+ 
+        <TextView
+            android:id="@+id/crednumberLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/systemcodeLabel"
+            android:text="@string/cred_number" />
+
+        <TextView
+            android:id="@+id/credNumber"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/crednumberLabel"
+            android:layout_below="@+id/systemCode"
+            android:ems="6"
+            android:maxLength="6" />
+  
+        <TextView
+            android:id="@+id/personidLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/crednumberLabel"
+            android:text="@string/person_id" />
+
+        <TextView
+            android:id="@+id/personId"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/personidLabel"
+            android:layout_below="@+id/credNumber"
+            android:ems="10"
+            android:maxLength="10" />
+
+        <TextView
+            android:id="@+id/orgcategoryLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personidLabel"
+            android:text="@string/org_category" />
+
+        <TextView
+            android:id="@+id/orgCategory"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/orgcategoryLabel"
+            android:layout_below="@+id/personId"
+            android:ems="10"
+            android:maxLength="10" />
+
+        <TextView
+            android:id="@+id/orgidLabel"
+            style="@style/Labels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/orgCategory"
+            android:text="@string/org_id" />
+
+        <TextView
+            android:id="@+id/orgId"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignRight="@id/orgidLabel"
+            android:layout_below="@+id/orgCategory"
+            android:ems="15"
+            android:maxLength="15" />
+
+        <TextView
+            android:id="@+id/issuingOrg"
+            style="@style/Inputtext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/orgId"
+            android:layout_marginLeft="@dimen/inputmarginleft" />
+
+         <TextView
+             android:id="@+id/poacodeLabel"
+             style="@style/Labels"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/issuingOrg"
+             android:text="@string/poa_code" />
+
+         <TextView
+             android:id="@+id/poaCode"
+             style="@style/Inputtext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_alignRight="@id/poacodeLabel"
+             android:layout_below="@+id/issuingOrg"
+             android:ems="15"
+             android:maxLength="15" />
+
+         <TextView
+             android:id="@+id/expirydateLabel"
+             style="@style/Labels"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/poacodeLabel"
+             android:text="@string/expiry_date" />
+
+         <TextView
+             android:id="@+id/expiryDate"
+             style="@style/Inputtext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_below="@+id/expirydateLabel"
+             android:ems="37"
+             android:maxLength="37" />
+
+         <TextView
+             android:id="@+id/globalidLabel"
+             style="@style/Labels"
+             android:layout_width="wrap_content"
+             android:layout_below="@+id/expiryDate"
+             android:text="@string/global_id" />
+
+         <TextView
+             android:id="@+id/globadId"
+             style="@style/Inputtext"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_marginLeft="@dimen/inputmarginleft"
+             android:ems="37"
+             android:maxLength="37"
+             android:layout_below="@+id/globalidLabel"   />
+    </RelativeLayout>
+
+</ScrollView>

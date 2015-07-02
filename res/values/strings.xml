@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="TODO">TODO</string>
+	<string name="TabCert_Title">CAK</string>
+	<string name="TabChuid_Title">CHUID Signing</string>
+	<string name="TabLog_Title">Log</string>
+	<string name="TabRead_Title">CHUID Data</string>
+	<string name="action_about">About</string>
+	<string name="action_settings">Settings</string>
+	<string name="action_share">Share</string>
+	<string name="agency_code">Agency</string>
+	<string name="app_name">ID One</string>
+	<string name="appname_version">IDevity IDOne Reader, v1.6 REL</string>
+	<string name="cake_pic">Cake Picture</string>
+	<string name="certificate_path">Certificate Path</string>
+	<string name="certificate_pop">Private Key Proof of Possession</string>
+	<string name="certificate_validation">Validity Period</string>
+	<string name="copyright">Copyright IDevity 2013 - 2015. All rights reserved.</string>
+	<string name="cred_number">Credential Number</string>
+	<string name="expiry_date">Expiration</string>
+	<string name="feedback">
+		To provide feedback:
+		<a href="mailto:support@idevity.com?subject=Android App">support@idevity.com</a>
+	</string>
+	<string name="global_id">GUID</string>
+	<string name="idevity_logo">IDevity Logo</string>
+	<string name="idevity_id_logo">IDevity ID Logo</string>
+	<string name="instructions_1">Hold your smart card to the back of your device.
+	</string>
+	<string name="instructions_2">This app supports PIV, PIV-I, CIV and TWIC smart
+		cards.</string>
+	<string name="issuer">Issuer</string>
+	<string name="nfc_disabled_warn">WARNING: NFC is NOT Enabled!</string>
+	<string name="nfc_disabled_warn_or_usb_not_plugged_in">Enable NFC or Plug in OTG USB Smart Card Reader
+	</string>
+	<string name="plug_in_usb_warn">Plug in OTG USB Smart Card Reader</string>
+	<string name="nfc_disclaimer">*There is a known issue reading cards with your
+		device configuration:</string>
+	<string name="nfc_disclaimer_more_info">
+		<a href="https://code.google.com/p/android/issues/detail?id=37882">Android Issue 37882</a>
+	</string>
+	<string name="no_cak1">Your smart card does not have an asymmetric Card
+		Authentication Key (CAK) or corresponding certificate.</string>
+	<string name="no_cak2">Please contact your smart card issuer for more
+		information.</string>
+	<string name="org_category">Category</string>
+	<string name="org_id">Organization ID</string>
+	<string name="openssl_ack">
+		This product includes software developed by the OpenSSL Project for
+		use in the OpenSSL Toolkit. (
+		<a href="http://www.openssl.org/">http://www.openssl.org/</a>
+		)
+	</string>
+	<!-- <string name="path_validation_fail">The certificate could not be validated 
+		to a trusted source.</string> -->
+	<string name="person_id">Person ID</string>
+	<string name="poa_code">Affiliation</string>
+	<string name="pref_default_email">Default Email for Sharing</string>
+	<string name="pref_default_email_summary">Set a default email address to send logs and data
+		values when Sharing is selected.</string>
+	<string name="pref_show_debug_summary">Select this option to capture log events in detail
+		(debug) mode. (requires restart)</string>
+	<string name="pref_show_debug_title">Debug Mode</string>
+	<string name="pref_show_log_summary">Select this option to display the log of the NFC
+		read as a tab.</string>
+	<string name="pref_show_log_title">Display Log</string>
+	<string name="pref_enable_pop_summary">Select this option to perform CAK authentication
+		[private key Proof of Possession check]. (requires restart)</string>
+	<string name="pref_enable_pop_title">Enable CAK POP</string>
+	<string name="progress_text">Reading card&#8230;</string>
+	<!-- <string name="share">Share Via&#8230;</string> -->
+	<string name="sign_valid">CHUID Signature Match</string>
+	<!-- <string name="signature_validation_fail">The signature did not validate.</string> -->
+	<string name="signing_valid">Signing Cert Valid</string>
+	<string name="splashscreen_caption">Enterprise Identity, Authentication, and Consumer
+		Identity</string>
+	<string name="subject">Subject</string>
+	<string name="system_code">System Code</string>
+	<string name="title_activity_idevity_info">Info</string>
+	<string name="title_activity_read_main">ID One</string>
+	<string name="title_activity_reading_progress">In progress</string>
+	<string name="title_activity_settings">Settings</string>
+	<string name="title_activity_pin">PIN</string>
+	<string name="valid_from">Issued</string>
+	<string name="valid_to">Expires</string>
+	<string name="warranties">Use of this application implies no implicit
+		warranties.</string>
+	<string name="website">
+		<a href="http://www.idevity.com">www.idevity.com</a>
+	</string>
+	<string name="title_activity_easter">Feedback</string>
+	<string name="eastercardtype">Select Card Manufacturer:</string>
+	<string name="easterprivacy">Privacy: Information provided will not be used for
+		any purpose other than to assess support for mobile device models and
+		card manufacturers.</string>
+	<string name="eastercardother">Other/Unknown Manufacturer:</string>
+	<string name="eastercardissuer">Card Issuer:</string>
+	<string name="eastercardissuedate">Card Issue Date:</string>
+	<string name="easterinstructions1">Please enter the following information, if
+		possible.</string>
+	<string name="easterinstructions2">The information below will be used to identify
+		mobile device and card support requirements.</string>
+	<string name="easterinstructions3">Select the Share option from the toolbar and email
+		to support@idevity.com.</string>
+	<string name="supportemail">support@idevity.com</string>
+	<string name="idevity">IDevity</string>
+	<string name="pininstructions"> Please enter your PIN. </string>
+	<string name="cardholder_photo">Cardholder Photo</string>
+	<string name="zone8_affiliation">Contractor</string>
+	<string name="zone8_affiliation_text">Affilication</string>
+	<string name="zone10_agency">Department of Homeland Security</string>
+	<string name="zone10_agency_text">Agency/Department</string>
+	<string name="zone14_expdate">2018 Sep 4</string>
+	<string name="zone14_expdate_text">Expires</string>
+	<string name="zone2_lastname">Doe</string>
+	<string name="zone2_first_middle_name">John H.</string>
+	<string name="zone19_expdate">SEP2018</string>
+	<string name="zone20_affiliation">DHS</string>
+	<string name="pin_val_placeholder">********</string>
+	<string name="button_0">0</string>
+	<string name="button_1">1</string>
+	<string name="button_2">2</string>
+	<string name="button_3">3</string>
+	<string name="button_4">4</string>
+	<string name="button_5">5</string>
+	<string name="button_6">6</string>
+	<string name="button_7">7</string>
+	<string name="button_8">8</string>
+	<string name="button_9">9</string>
+	<string name="button_dummy" />
+	<string name="button_back">Back</string>
+	<string name="button_enter">Enter</string>
+	
+	<string-array name="cardtypemanarray">
+		<item>Athena</item>
+		<item>CardLogix</item>
+		<item>Gemalto</item>
+		<item>Giesecke &amp; Devrient</item>
+		<item>Hitachi</item>
+		<item>Keycorp Limited</item>
+		<item>NXP</item>
+		<item>Oberthur</item>
+		<item>SafeNet</item>
+		<item>Sagem Orga</item>
+		<item>TecSec</item>
+		<item>Other/Don\&#39;t Know</item>
+	</string-array>
+
+</resources>
