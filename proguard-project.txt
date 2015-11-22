@@ -39,4 +39,8 @@
 -keepclasseswithmembernames class * {
 	native <methods>;
 }
- 
+
+-libraryjars './libs/android-support-v13.jar'
+-dontwarn **CompatHoneycomb
+-keep class android.support.v4.** { *; }
+ -libraryjars ./libs
