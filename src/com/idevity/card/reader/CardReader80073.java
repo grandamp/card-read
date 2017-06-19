@@ -195,7 +195,10 @@ public class CardReader80073 {
 						if (debug) {
 							log("Selecting PIV Card Application");
 						}
-						response = transmit(new CommandAPDU(PIVAPDUInterface.SELECT_PIV));
+						ByteArrayOutputStream baos = new ByteArrayOutputStream();
+						baos.write(PIVAPDUInterface.SELECT_PIV);	// Header + AID
+						baos.write(0x00);				// Le
+						response = transmit(new CommandAPDU(baos.toByteArray()));
 						log("Response from select: " + DataUtil.byteArrayToString(response.getBytes()));
 					}
 					log("############################################\n");
